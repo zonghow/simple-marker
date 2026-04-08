@@ -1,0 +1,327 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A00000000000000000000001 /* SimpleMarkerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000101 /* SimpleMarkerApp.swift */; };
+		A00000000000000000000002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000102 /* AppDelegate.swift */; };
+		A00000000000000000000003 /* StatusItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000103 /* StatusItemController.swift */; };
+		A00000000000000000000004 /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000104 /* Shortcut.swift */; };
+		A00000000000000000000005 /* HotkeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000105 /* HotkeyManager.swift */; };
+		A00000000000000000000006 /* ShortcutRecorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000106 /* ShortcutRecorderView.swift */; };
+		A00000000000000000000007 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000107 /* SettingsView.swift */; };
+		A00000000000000000000008 /* SettingsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000108 /* SettingsWindowController.swift */; };
+		A00000000000000000000009 /* AnnotationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000109 /* AnnotationController.swift */; };
+		A0000000000000000000000A /* AnnotationWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000010A /* AnnotationWindow.swift */; };
+		A0000000000000000000000B /* AnnotationCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000010B /* AnnotationCanvasView.swift */; };
+		A0000000000000000000000C /* LoginItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000010C /* LoginItemManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A00000000000000000000101 /* SimpleMarkerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMarkerApp.swift; sourceTree = "<group>"; };
+		A00000000000000000000102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A00000000000000000000103 /* StatusItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemController.swift; sourceTree = "<group>"; };
+		A00000000000000000000104 /* Shortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcut.swift; sourceTree = "<group>"; };
+		A00000000000000000000105 /* HotkeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotkeyManager.swift; sourceTree = "<group>"; };
+		A00000000000000000000106 /* ShortcutRecorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutRecorderView.swift; sourceTree = "<group>"; };
+		A00000000000000000000107 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A00000000000000000000108 /* SettingsWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWindowController.swift; sourceTree = "<group>"; };
+		A00000000000000000000109 /* AnnotationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationController.swift; sourceTree = "<group>"; };
+		A0000000000000000000010A /* AnnotationWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationWindow.swift; sourceTree = "<group>"; };
+		A0000000000000000000010B /* AnnotationCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationCanvasView.swift; sourceTree = "<group>"; };
+		A0000000000000000000010C /* LoginItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginItemManager.swift; sourceTree = "<group>"; };
+		A0000000000000000000010D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0000000000000000000010E /* SimpleMarker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = SimpleMarker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A00000000000000000000201 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A00000000000000000000300 = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000301 /* SimpleMarker */,
+				A00000000000000000000302 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A00000000000000000000301 /* SimpleMarker */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000310 /* App */,
+				A00000000000000000000311 /* MenuBar */,
+				A00000000000000000000312 /* Hotkey */,
+				A00000000000000000000313 /* Settings */,
+				A00000000000000000000314 /* Annotation */,
+				A00000000000000000000315 /* System */,
+				A0000000000000000000010D /* Info.plist */,
+			);
+			path = SimpleMarker;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000302 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0000000000000000000010E /* SimpleMarker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000310 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000101 /* SimpleMarkerApp.swift */,
+				A00000000000000000000102 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000311 /* MenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000103 /* StatusItemController.swift */,
+			);
+			path = MenuBar;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000312 /* Hotkey */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000104 /* Shortcut.swift */,
+				A00000000000000000000105 /* HotkeyManager.swift */,
+				A00000000000000000000106 /* ShortcutRecorderView.swift */,
+			);
+			path = Hotkey;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000313 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000107 /* SettingsView.swift */,
+				A00000000000000000000108 /* SettingsWindowController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000314 /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000109 /* AnnotationController.swift */,
+				A0000000000000000000010A /* AnnotationWindow.swift */,
+				A0000000000000000000010B /* AnnotationCanvasView.swift */,
+			);
+			path = Annotation;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000315 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				A0000000000000000000010C /* LoginItemManager.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A00000000000000000000400 /* SimpleMarker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A00000000000000000000601 /* Build configuration list for PBXNativeTarget "SimpleMarker" */;
+			buildPhases = (
+				A00000000000000000000202 /* Sources */,
+				A00000000000000000000201 /* Frameworks */,
+				A00000000000000000000203 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleMarker;
+			productName = SimpleMarker;
+			productReference = A0000000000000000000010E /* SimpleMarker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A00000000000000000000500 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2640;
+				LastUpgradeCheck = 2640;
+				TargetAttributes = {
+					A00000000000000000000400 = {
+						CreatedOnToolsVersion = 26.4;
+					};
+				};
+			};
+			buildConfigurationList = A00000000000000000000600 /* Build configuration list for PBXProject "SimpleMarker" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A00000000000000000000300;
+			productRefGroup = A00000000000000000000302 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A00000000000000000000400 /* SimpleMarker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A00000000000000000000203 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A00000000000000000000202 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A00000000000000000000001 /* SimpleMarkerApp.swift in Sources */,
+				A00000000000000000000002 /* AppDelegate.swift in Sources */,
+				A00000000000000000000003 /* StatusItemController.swift in Sources */,
+				A00000000000000000000004 /* Shortcut.swift in Sources */,
+				A00000000000000000000005 /* HotkeyManager.swift in Sources */,
+				A00000000000000000000006 /* ShortcutRecorderView.swift in Sources */,
+				A00000000000000000000007 /* SettingsView.swift in Sources */,
+				A00000000000000000000008 /* SettingsWindowController.swift in Sources */,
+				A00000000000000000000009 /* AnnotationController.swift in Sources */,
+				A0000000000000000000000A /* AnnotationWindow.swift in Sources */,
+				A0000000000000000000000B /* AnnotationCanvasView.swift in Sources */,
+				A0000000000000000000000C /* LoginItemManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A00000000000000000000700 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A00000000000000000000701 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A00000000000000000000710 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SimpleMarker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.SimpleMarker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A00000000000000000000711 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SimpleMarker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.SimpleMarker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A00000000000000000000600 /* Build configuration list for PBXProject "SimpleMarker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A00000000000000000000700 /* Debug */,
+				A00000000000000000000701 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A00000000000000000000601 /* Build configuration list for PBXNativeTarget "SimpleMarker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A00000000000000000000710 /* Debug */,
+				A00000000000000000000711 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A00000000000000000000500 /* Project object */;
+}
