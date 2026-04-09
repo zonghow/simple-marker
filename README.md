@@ -36,6 +36,24 @@ open "SimpleMarker.xcodeproj"
 2. 点击 Run
 3. 程序启动后会出现在菜单栏中
 
+## Release 构建
+
+```bash
+make release
+```
+
+构建完成后，产物位于：
+
+```bash
+dist/SimpleMarker.app
+```
+
+如需清理本地产物：
+
+```bash
+make clean-release
+```
+
 ## 使用方式
 
 ### 开始标注
@@ -70,4 +88,5 @@ SimpleMarker/
   Settings/
   System/
 SimpleMarker.xcodeproj/
+Makefile
 ```

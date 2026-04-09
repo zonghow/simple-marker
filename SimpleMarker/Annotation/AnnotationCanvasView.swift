@@ -24,6 +24,7 @@ final class AnnotationCanvasView: NSView {
     private var currentStroke: Stroke?
     private var trackingArea: NSTrackingArea?
     private var isErasing = false
+    private var lastErasePoint: CGPoint?
 
     override var acceptsFirstResponder: Bool {
         true
@@ -125,16 +126,24 @@ final class AnnotationCanvasView: NSView {
     override func rightMouseDown(with event: NSEvent) {
         isErasing = true
         updateCursor()
-        eraseStrokeIfNeeded(at: convert(event.locationInWindow, from: nil))
+
+        let point = convert(event.locationInWindow, from: nil)
+        lastErasePoint = point
+        eraseStrokesAlongPath(from: point, to: point)
     }
 
     override func rightMouseDragged(with event: NSEvent) {
         updateCursor()
-        eraseStrokeIfNeeded(at: convert(event.locationInWindow, from: nil))
+
+        let point = convert(event.locationInWindow, from: nil)
+        let startPoint = lastErasePoint ?? point
+        eraseStrokesAlongPath(from: startPoint, to: point)
+        lastErasePoint = point
     }
 
     override func rightMouseUp(with event: NSEvent) {
         isErasing = false
+        lastErasePoint = nil
         updateCursor()
     }
 
@@ -165,21 +174,54 @@ final class AnnotationCanvasView: NSView {
         redoActions.removeAll()
     }
 
-    private func eraseStrokeIfNeeded(at point: CGPoint) {
-        guard let index = strokeIndex(at: point) else {
+    private func eraseStrokesAlongPath(from startPoint: CGPoint, to endPoint: CGPoint) {
+        let touchedStrokeIDs = Set(sampledPoints(from: startPoint, to: endPoint).compactMap { point in
+            strokeID(at: point)
+        })
+
+        guard !touchedStrokeIDs.isEmpty else {
             return
         }
 
-        let stroke = strokes.remove(at: index)
-        historyActions.append(.remove(stroke, index: index))
+        let removals = strokes.enumerated()
+            .filter { touchedStrokeIDs.contains($0.element.id) }
+            .map { ($0.offset, $0.element) }
+            .reversed()
+
+        for (index, stroke) in removals {
+            strokes.remove(at: index)
+            historyActions.append(.remove(stroke, index: index))
+        }
+
         redoActions.removeAll()
         needsDisplay = true
     }
 
-    private func strokeIndex(at point: CGPoint) -> Int? {
+    private func sampledPoints(from startPoint: CGPoint, to endPoint: CGPoint) -> [CGPoint] {
+        let deltaX = endPoint.x - startPoint.x
+        let deltaY = endPoint.y - startPoint.y
+        let distance = hypot(deltaX, deltaY)
+
+        guard distance > 0 else {
+            return [startPoint]
+        }
+
+        let step = max(eraserHitWidth / 2, 1)
+        let segmentCount = max(Int(ceil(distance / step)), 1)
+
+        return (0...segmentCount).map { index in
+            let progress = CGFloat(index) / CGFloat(segmentCount)
+            return CGPoint(
+                x: startPoint.x + deltaX * progress,
+                y: startPoint.y + deltaY * progress
+            )
+        }
+    }
+
+    private func strokeID(at point: CGPoint) -> UUID? {
         strokes.indices.reversed().first { index in
             stroke(at: strokes[index], contains: point)
-        }
+        }.map { strokes[$0].id }
     }
 
     private func stroke(at stroke: Stroke, contains point: CGPoint) -> Bool {
